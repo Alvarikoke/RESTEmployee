@@ -10,14 +10,14 @@ export class EmpleadoService {
   constructor(private http: HttpClient) { }
 
   getEmployees() {
-    return this.http.get(´${this.baseURL}/employees´);
+    return this.http.get(`${this.baseURL}/employees`);
   }
 
   getEmployee(id: number) {
-    return this.http.get(´${this.baseURL}/employee/${id}´);
+    return this.http.get(`${this.baseURL}/employee/${id}`);
   }
 
   createEmployee(data: any) {
-    return this.http.get(´${this.baseURL}/create´, data);
+    return this.http.post(`${this.baseURL}/create`, data);
   }
 }
